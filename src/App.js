@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { connect } from "react-redux";
+import { projectsSelector } from "./model/project";
+import { tasksSelector } from "./model/task";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+const App = ({ projects, tasks }) => (
+  <div>
+    {projects.map((item) => item.name)}
+    {tasks.map((item) => item.name)}
+  </div>
+);
+export default connect((state) => ({
+  projects: projectsSelector(state),
+  tasks: tasksSelector(state),
+}))(App);
