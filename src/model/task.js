@@ -1,9 +1,9 @@
 import { createSelector } from "reselect";
-import taskData from "../JSONdata/tasks.json";
+import { tasks } from "../JSONdata/tasks.json";
 
 export const moduleName = "tasks";
 export const initialState = {
-  tasks: taskData.tasks,
+  tasks: tasks,
 };
 
 const reducer = (state = initialState, action) => {

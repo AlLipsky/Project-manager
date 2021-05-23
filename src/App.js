@@ -1,15 +1,21 @@
 import "./App.css";
-import { connect } from "react-redux";
-import { projectsSelector } from "./model/project";
-import { tasksSelector } from "./model/task";
+import { Switch, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import ProjectList from "./components/Project";
+import TaskList from "./components/Task";
 
 const App = ({ projects, tasks }) => (
   <div>
-    {projects.map((item) => item.name)}
-    {tasks.map((item) => item.name)}
+    <NavBar />
+    <Switch>
+      <Route exact path={"/"}>
+        <ProjectList />
+      </Route>
+      <Route path={"/tasks"}>
+        <TaskList />
+      </Route>
+      <Route path={"*"}>404</Route>
+    </Switch>
   </div>
 );
-export default connect((state) => ({
-  projects: projectsSelector(state),
-  tasks: tasksSelector(state),
-}))(App);
+export default App;

@@ -1,10 +1,10 @@
 import { createSelector } from "reselect";
-import * as projectData from "../JSONdata/projects.json";
+import { projects } from "../JSONdata/projects.json";
 
 export const moduleName = "projects";
 
 export const initialState = {
-  projects: projectData.projects,
+  projects: projects,
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,7 +12,8 @@ const reducer = (state = initialState, action) => {
   switch (type) {
     case "ADD_PROJECT":
       break;
-
+    case "EDIT_PROJECT":
+      break;
     default:
       return state;
   }

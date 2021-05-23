@@ -1,0 +1,15 @@
+input {
+  width: 80px;
+}
+
+input:hover {
+  width: 300px;
+}
+
+input:focus {
+  width: 300px;
+}
+
+input:valid {
+  width: 300px;
+}

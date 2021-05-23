@@ -1,1 +1,28 @@
-{ "tasks": [{ "name": "task-1" }, { "name": "task-2" }, { "name": "task-3" }] }
+{
+  "tasks": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "status": "new",
+      "name": "task-1",
+      "description": "123",
+      "type": "refactoring"
+    },
+    {
+      "id": 1,
+      "projectId": 1,
+      "status": "new",
+      "name": "task-2",
+      "description": "123",
+      "type": "debuging"
+    },
+    {
+      "id": 1,
+      "projectId": 2,
+      "status": "working",
+      "name": "task-3",
+      "description": "123",
+      "type": "refactoring"
+    }
+  ]
+}
