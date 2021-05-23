@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { projectsSelector } from "../../model/project";
+import { projectsSelector, getProjectList } from "../../model/project";
 import ProjectList from "./ProjectList";
 
 export default connect((state) => ({
   projects: projectsSelector(state),
-}))(ProjectList);
+}), {getProjectList})(ProjectList);

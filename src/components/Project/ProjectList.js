@@ -1,6 +1,10 @@
 import Project from "./Project";
+import {useEffect} from "react"
 
-const ProjectList = ({ projects }) => {
+const ProjectList = ({ projects, getProjectList }) => {
+  useEffect(() => {
+    getProjectList()
+  }, [getProjectList])
   return (
     <div>
       {projects &&

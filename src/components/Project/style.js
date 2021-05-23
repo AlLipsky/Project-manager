@@ -8,3 +8,7 @@ export const ProjectContainer = styled.div`
   margin-top: 10px;
   justify-content: space-between;
 `;
+
+export const Button = styled.button.attrs(props => ({...props}))`
+  color: ${props => props.disabled ? '#ccc' : 'inherit'};
+`
